@@ -1,0 +1,26 @@
+## Angular 表达式
+* ng-app="" 应用程序所有者
+* ng-init="常量、数组、字符串"
+* ng-bind="绑定元素，可以为字符串，常量，json，数组"
+## Angular 指令
+* ng-model 指令把元素值（比如输入域的值）绑定到应用程序
+* ng-repeat="x in names" 循环遍历数据"
+* app.directive 创建自定义指令
+* ng-show="myForm.myAddress.$error.email" 返回值为true的情况下显示
+* myForm.myAddress.$valid 输入值合法为true
+* myForm.myAddress.$dirty 只改变为true
+* myForm.myAddress.$touched 通过触屏点击为true
+## Angular Scope(作用域)
+* $scope 对象当作一个参数传递:
+app.controller('myCtrl', function($scope) {
+    $scope.carname = "Volvo";
+});
+* scope 是一个 JavaScript 对象，带有属性和方法
+app.controller('myCtrl', function($scope) {
+    $scope.name = "Runoob";
+    $scope.sayHello = function() {
+        $scope.greeting = 'Hello ' + $scope.name + '!';
+    };
+});
+* 根作用域 所有的应用都有一个 $rootScope，$rootScope 可作用于整个应用中
+## Angular 控制器
