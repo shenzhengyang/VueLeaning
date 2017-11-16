@@ -79,8 +79,10 @@ $http({
 });
 ## Angular 选择框
 * ng-options 
+<code>
 <select ng-init="selectedName=name[0]" ng-model="selectedName" ng-options="x for x in names"">
 </select>
+</code>
 * ng-repeate(倾向于在这种方法，简单易懂)
 <select>
 <option ng-repeat='x in names'>{{x}}</option>
@@ -174,6 +176,22 @@ mainApp.config(function($provide) {
       };
    });
 });
+* constant
+mainApp.constant("configParam", "constant value");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
